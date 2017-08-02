@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JS</title>
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css"/>-->
+
+<style>
+    body{
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    #content{
+        background: #efefef;
+        border:1px solid #ddd;
+    }
+    #content>div{
+        display: inline-block;
+        margin: 10px;
+        background: darkcyan;
+        color: white;
+        padding: 30px;
+        width: 10px;
+        height:10px;
+        text-align: center;
+
+
+
+    }
+
+</style>
+
+</head>
+<body>
+
+<div id="content">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<button onClick="addDivs();">Füge .enter und .append Elemente hinzu</button>
+<button onClick="removeDivs();">Entferne Elemente mittels .exit und .remove </button>
+
+<hr>
+<div id="log"></div>
+
+<script src="js/d3.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
