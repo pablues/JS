@@ -42,6 +42,7 @@ document.querySelector('#content').onclick = function () {
 
 
 
+
 (function () {
     if (!console) {
         console = {};
