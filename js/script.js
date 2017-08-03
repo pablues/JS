@@ -5,7 +5,22 @@
 
 
  var myData = ["A", "B", "C", "D", "E", "F", "G"];
- var my2ndData = ["A"];
+ var my2ndData = [];
+
+ function printmyData() {
+     console.log(myData);
+ }
+ function printmy2ndData() {
+     console.log(my2ndData);
+ }
+ function push2ndArray() {
+     var eingabe = prompt("Gebe den Wert ein");
+     my2ndData.push(eingabe);
+     printmy2ndData()
+ }
+ document.querySelector("span").onclick = function () {
+    console.log("Hi ich bin deine Console")
+ }
 
  function addDivs(){
  var u = d3.select("#content")
@@ -33,13 +48,27 @@
 
  var cont = [];
 
-document.querySelector('#content').onclick = function () {
+document.querySelector('#hinzu').onclick = function () {
   var c = prompt("Gebe ein");
-  console.log(c);
   cont.push(c);
   console.log(cont);
-};
+  c = d3.select("#content").selectAll("div").data(cont);
+    c.enter()
+        .append("div")
+        .merge(c)
+        .text(function (d) {
+            return d;
+        })
+        .transition()
+        .duration(750)
+        .style("opacity", 1)
+        .duration(1200)
+        .style("transform", "translateX(10px)")
+        .style("background-color","coral")
+        .style("color", "white")
 
+
+};
 
 
 

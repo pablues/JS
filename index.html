@@ -10,10 +10,15 @@
     body{
         font-family: "Helvetica Neue", Helvetica, sans-serif;
         font-size: 14px;
+        background: #555;
+        margin:0px;
+        padding:0 0 0 0;
     }
     #content{
-        background: #efefef;
-        border:1px solid #ddd;
+        padding:50px 0px 10px 0px;
+        background: #666;
+
+        font-family:"Segoe UI";
     }
     #content>div{
         display: inline-block;
@@ -25,10 +30,55 @@
         height:10px;
         text-align: center;
 
+    }
+    #menu{
+        margin:0px;
+        padding:5px 0px 5px 0px;
+        width:100%;
+        background:#444;
+        display:inline-block;
+        font-family:"Segoe UI";
+    }
+    #log{
 
+        color:cornflowerblue;
+        font-family:"Consolas";
+        font-size:16px;
+        padding:10px 20px;
+        background:#444;
+    }
+    button{
+        background: #626262;
+        font-family:"Segoe UI";
+        border-style:solid;
+        padding:6px;
+        border-width:1px;
+        border-color: #666;
+
+    }
+    button:hover{
+        background: silver;
+        border-style:inset;
+    }
+    #conWrap span{
+        width: 100%;
+        padding:5px 15px;
+        display: inline-block;
+        background: inherit;
+        color: #777;
+        background: #555;
+
+        transition: background 1000ms ease-out;
+    }
+    #conWrap{
+        font-family:"Segoe UI";
+
+        padding-bottom:50px;
 
 
     }
+
+
 
 </style>
 
@@ -40,13 +90,19 @@
     <div></div>
     <div></div>
 </div>
+<div id="menu">
+<button onClick="addDivs();">+.enter & .append el.</button>
+<button onClick="removeDivs();">-el. mittels .exit und .remove </button>
+<button id="hinzu">+el. & console.log</button>
+<button onclick="printmyData()">Print myDataArray</button>
+<button onclick="printmy2ndData()">Print my2ndDataArray</button>
+<button onclick="push2ndArray()">+el:my2ndData</button>
+</div>
 
-<button onClick="addDivs();">Füge .enter und .append Elemente hinzu</button>
-<button onClick="removeDivs();">Entferne Elemente mittels .exit und .remove </button>
-
-<hr>
-<div id="log"></div>
-
+<div id="conWrap">
+        <span>Console</span>
+        <div id="log"></div>
+</div>
 <script src="js/d3.min.js"></script>
 <script src="js/script.js"></script>
 
