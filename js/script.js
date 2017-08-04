@@ -73,6 +73,7 @@ document.querySelector('#hinzu').onclick = function () {
 
 
 
+
 (function () {
     if (!console) {
         console = {};
