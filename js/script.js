@@ -7,6 +7,7 @@
 
 
 
+
 (function () {
     if (!console) {
         console = {};
